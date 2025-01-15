@@ -1,0 +1,149 @@
+.hamburger-button {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.hamburger-bars {
+  width: 20px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.bar:nth-child(1) {
+  top: 0;
+}
+
+.bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bar:nth-child(3) {
+  bottom: 0;
+}
+
+.hamburger-button.active .bar:nth-child(1) {
+  transform: rotate(45deg);
+  top: 50%;
+  margin-top: -1.5px;
+}
+
+.hamburger-button.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-button.active .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 50%;
+  margin-bottom: -1.5px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  max-width: 25%;
+}
+
+.navbar__logo__img {
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  padding: 12px;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+.navbar__menu__btn {
+  background-color: #91b842;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 16px;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+}
+
+.icon {
+  color: #fff;
+  font-size: 26px;
+  color: #fd9d3e;
+}
+
+.sidebar {
+  position: absolute;
+  top: 100%;
+  left: -120%;
+  width: 100%;
+  background-color: #fd9d3e;
+  transition: left 0.3s ease-in-out;
+  z-index: 2;
+  height: 100vh;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar__menu {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.sidebar__menu li {
+  padding: 15px 0;
+}
+
+.sidebar__menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.sidebar__menu a:hover {
+  color: #121619;
+}
+
+.navbar--scrolled {
+  background-color: #121619;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
