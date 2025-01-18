@@ -8,10 +8,6 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  font-family: "PT Sans Narrow", sans-serif;
-}
-
 .header {
   background-color: #121619;
   min-height: 500px;
